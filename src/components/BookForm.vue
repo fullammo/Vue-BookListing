@@ -1,5 +1,5 @@
 <template>
-  <form>
+  <form v-on:submit.prevent="bookSubmit(bookTitle,bookAuthor)">
     <input
       type="text"
       v-model="bookTitle"
@@ -17,7 +17,6 @@
     <button
       type="submit"
       name="button"
-      v-on:submit.prevent="bookSubmit(bookTitle,bookAuthor)"
     >
       Add Book
     </button>
